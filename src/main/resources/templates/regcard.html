@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Regiistration-card</title>
+</head>
+<body>
+	<h1>Kindly Enter Registration Number Below to get Registration Card</h1>
+
+	<form th:action="@{/get-regcard}">
+	<table>
+		<tr>
+			<td>Registration Number</td>
+			<td><input type="text" name="regNum"/></td>
+		</tr>
+		
+		
+		<tr>
+			<td><input type="submit" value="Get Registration Card"/></td>
+		</tr>
+	</table>
+	
+	</form>
+	<hr/>
+	<table>
+		<tr>
+			<td>Registration Number :</td>
+			<td>
+				<p th:text=${reg.regNum}/>
+			</td>
+		</tr>	
+		<tr>
+			<td>Student Name :</td>
+			<td>
+				<p th:text=${reg.sname}/>
+			</td>
+		</tr>
+		<tr>
+			<td>Year of Registration :</td>
+			<td>
+				<p th:text=${reg.yearOfReg}/>
+			</td>
+		</tr>
+		<tr>
+			<td>Name of the Institute :</td>
+			<td>
+				<p th:text=${reg.instituteName}/>
+			</td>
+		</tr>
+		<tr>
+			<td>Name of the Board:</td>
+			<td>
+			<p th:text=${reg.boardName}/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Student date of birth :</td>
+			<td>
+			<p th:text=${reg.dob}/>
+			</td>
+		</tr>
+			
+	</table> 
+	
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Fill the below form to register</h1>
+		<form th:action="@{/register}" th:object="${student}" method="post">
+		<p th:text="${regNum}"></p>
+			<table>
+				<tr>
+					<td>Student Id <td>
+					<td><input type="text" th:field="*{sid}"/></td>
+				</tr>
+				<tr>
+					<td> Student Name</td>
+					<td><input type="text" th:field="*{sname}"/></td>
+				</tr>
+				<tr>
+					<td> Student Year of Registration</td>
+					<td><input type="text" th:field="*{yearOfReg}"/></td>
+				</tr>
+				<tr>
+					<td> Student Department</td>
+					<td><input type="text" th:field="*{department}"/></td>
+				</tr>
+				<tr>
+					<td> Student Institue Name</td>
+					<td><input type="text" th:field="*{instituteName}"/></td>
+				</tr>
+				
+				<tr>
+					<td> Student Board Name</td>
+					<td><input type="text" th:field="*{boardName}"/></td>
+				</tr>
+				<tr>
+					<td>Student Date of Birth </td>
+					<td><input type="text" th:field="*{dob}"/></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Register Student"/></td>
+				</tr>
+			</table>
+			<a href="/reg"> Get Registration card</a>
+			&nbsp;
+			<a href="/admit"> Get Admit card</a>
+		</form>
+	</body>
+</html>
